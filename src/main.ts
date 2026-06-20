@@ -13,10 +13,15 @@ if (typeof data === "string") {
     console.log(data * 2);
 } else if (typeof data === "boolean") {
     console.log(data ? "Si" : "No");
+} else if (data === null) {
+    console.log("Il dato è vuoto");
+} else if (data instanceof Array) {
+    console.log(data.length);
+} else if (data instanceof Promise) {
+    data.then(res => console.log(res))
 } else {
     console.log("“Tipo non supportato”");
 }
-
 // 🎯 BONUS
 // Se è null: stampa “Il dato è vuoto”
 // Se è un array: stampa la sua lunghezza
